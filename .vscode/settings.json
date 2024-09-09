@@ -1,3 +1,5 @@
 {
-    "CodeGPT.Autocomplete.enabled": true
+    "CodeGPT.Autocomplete.enabled": true,
+    "cmake.ignoreCMakeListsMissing": true,
+    "avdmanager.emulator": "c:\\Users\\DELL\\AppData\\Local\\Android\\Sdk\\tools\\emulator.bat"
 }

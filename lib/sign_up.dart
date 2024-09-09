@@ -1,7 +1,7 @@
 import 'package:authentication_authorization/login.dart' hide supabase;
+import 'package:authentication_authorization/main.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:authentication_authorization/main.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -36,7 +36,7 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Sign Up'),
+        title: const Text('Sign Up', style: TextStyle(color: Colors.white),),
         backgroundColor: Colors.purple,
       ),
       body: Center(
@@ -125,19 +125,14 @@ class _SignUpState extends State<SignUp> {
                   ),
                 ),
                 SizedBox(height: 20,),
-                Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    border: Border.all(color: Colors.blue.shade50),
-                  ),
-                  child: ElevatedButton(
-                  onPressed: signUp,
-                  child: Text('Sign Up'),
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Colors.purple),
-                    foregroundColor: MaterialStateProperty.all<Color>((Colors.white)),
-                  ),
-                ),),
+                ElevatedButton(
+                onPressed: signUp,
+                child: Text('Sign Up'),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all<Color>(Colors.purple),
+                  foregroundColor: MaterialStateProperty.all<Color>((Colors.white)),
+                ),
+                                ),
 
                 SizedBox(height: 20),
               Container(
